@@ -31,6 +31,10 @@ INSTALLED_APPS = [
 
 MY_APPS = [
     'customers',
+    'products',
+    'orders',
+    'shipping_and_billing',
+    'discounts_and_promotions',
 ]
 
 THIRD_PARTY_APPS = [
