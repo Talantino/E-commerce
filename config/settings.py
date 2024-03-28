@@ -39,6 +39,8 @@ MY_APPS = [
 
 THIRD_PARTY_APPS = [
     'rest_framework',
+    'django.contrib.staticfiles',
+    'drf_yasg',
 ]
 
 INSTALLED_APPS += MY_APPS + THIRD_PARTY_APPS
