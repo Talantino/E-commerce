@@ -1,4 +1,3 @@
-
 from pathlib import Path
 from datetime import timedelta
 
@@ -39,7 +38,6 @@ MY_APPS = [
 
 THIRD_PARTY_APPS = [
     'rest_framework',
-    'django.contrib.staticfiles',
     'drf_yasg',
 ]
 
