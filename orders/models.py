@@ -2,6 +2,7 @@ from django.db import models
 from customers.models import User
 from products.models import Product
 
+
 class Order(models.Model):
     STATUS_CHOICES = [
         ('Pending', 'Pending'),
