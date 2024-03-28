@@ -1,5 +1,6 @@
 from django.db import models
-from customers.models import User
+# from customers.models import User
+from django.conf import settings
 
 
 class Product(models.Model):
@@ -8,7 +9,7 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     stock_quantity = models.IntegerField()
     category = models.ForeignKey("Category", on_delete=models.CASCADE)
-    supplier = models.ForeignKey("Supplier", on_delete=models.CASCADE)
+    supplier = models.ForeignKey(settings.AUTH_USER_MODEL, related_name="supplier", on_delete=models.CASCADE)
     discount_flag = models.BooleanField()
 
     class Meta:
@@ -16,7 +17,7 @@ class Product(models.Model):
         verbose_name_plural = "Products"
 
     def __str__(self):
-        return self.name, self.category
+        return f"{self.name}, {self.category}"
 
 
 class Category(models.Model):
@@ -30,22 +31,9 @@ class Category(models.Model):
         return self.category_name
 
 
-class Supplier(models.Model):
-    supplier_name = models.CharField(max_length=255)
-    contact_name = models.CharField(max_length=255)
-    phone_number = models.CharField(max_length=255)
-
-    class Meta:
-        verbose_name = "Supplier"
-        verbose_name_plural = "Suppliers"
-
-    def __str__(self):
-        return self.supplier_name
-
-
 class ProductReview(models.Model):
     product = models.ForeignKey("Product", on_delete=models.CASCADE)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     rating = models.IntegerField()
     review_text = models.TextField()
     review_date = models.DateTimeField(auto_now_add=True)
