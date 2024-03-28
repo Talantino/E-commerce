@@ -29,6 +29,16 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+MY_APPS = [
+    'customers',
+]
+
+THIRD_PARTY_APPS = [
+    'rest_framework',
+]
+
+INSTALLED_APPS += MY_APPS + THIRD_PARTY_APPS
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -89,6 +99,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = 'customers.User'
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
