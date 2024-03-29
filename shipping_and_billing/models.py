@@ -13,8 +13,8 @@ class Address(models.Model):
         max_length=255,
         validators=[
             RegexValidator(
-                regex='^\d{5}(-\d{4})?$',
-                message='Postal code must be in the format XXXXX or XXXXX-XXXX.'
+                regex=r'(^\d{5}(-\d{4})?$)|([A-Za-z]\d[A-Za-z] ?\d[A-Za-z]\d)',
+                message='Postal code must be in the format XXX XXX or XXXXX-XXXX or XXXXX.'
             )
         ]
     )

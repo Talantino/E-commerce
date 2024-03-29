@@ -45,7 +45,7 @@ class Order(models.Model):
         verbose_name_plural = "Orders"
 
     def __str__(self):
-        return f"Order by {self.user}"
+        return f"Order by {self.user} total price {self.total_price}"
 
 
 class OrderDetails(models.Model):

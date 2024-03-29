@@ -34,10 +34,11 @@ class PromoCode(models.Model):
         validators=[MinValueValidator(0), MaxValueValidator(100)]
     )
     expiry_date = models.DateTimeField()
+    start_date = models.DateTimeField()
     is_active = models.BooleanField(default=True)
 
     def clean(self):
-        if self.start_date >= self.end_date:
+        if self.start_date >= self.expiry_date:
             raise ValidationError("End date must be after start date.")
         super().clean()
 

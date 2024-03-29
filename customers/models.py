@@ -24,7 +24,7 @@ class User(AbstractUser):
     # last_login = models.DateTimeField(auto_now=True)
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['first_name', 'last_name', 'phone', 'user_type']
+    REQUIRED_FIELDS = ['username', 'last_name', 'user_type']
 
     class Meta:
         verbose_name = "User"
