@@ -1,4 +1,4 @@
-from rest_framework.generics import ListCreateAPIView
+# from rest_framework.generics import ListCreateAPIView
 from rest_framework import viewsets, permissions
 from rest_framework.viewsets import GenericViewSet, mixins
 from .models import Product, ProductReview, Category

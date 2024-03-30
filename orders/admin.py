@@ -14,6 +14,9 @@ class OrderItemAdmin(admin.ModelAdmin):
         return obj.get_total_price()
     get_total_price.short_description = 'Total Price'
 
+    def get_list_display(self, request):
+        return self.list_display
+
 
 admin.site.register(OrderItem, OrderItemAdmin)
 admin.site.register(OrderDetails, OrderDetailsAdmin)

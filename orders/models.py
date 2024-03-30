@@ -38,10 +38,10 @@ class OrderDetails(models.Model):
     discount_applied = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(100)], null=True, blank=True, default=0)
 
     def update_total_price(self):
-        subtotal = sum(item.get_total_price() for item in self.orderitems.all())
         item_discounts = any(item.product.discount_flag for item in self.orderitems.all())
         if item_discounts:
             self.discount_applied = 15
+        subtotal = sum(item.get_total_price() for item in self.orderitems.all())
         if subtotal > 20000:
             self.discount_applied = 15  # 15% discount
         elif subtotal > 10000:
