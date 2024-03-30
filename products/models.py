@@ -22,7 +22,7 @@ class Product(models.Model):
     stock_quantity = models.IntegerField()
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     supplier = models.ForeignKey(settings.AUTH_USER_MODEL, related_name="suppliers", on_delete=models.CASCADE)
-    discount_flag = models.BooleanField(default=False)
+    discount_flag = models.BooleanField(default=False)  # 15% off if true
 
     class Meta:
         verbose_name = "Product"
