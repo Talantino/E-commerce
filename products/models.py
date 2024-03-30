@@ -9,17 +9,6 @@ class Category(models.Model):
 
     class Meta:
         verbose_name = "Category"
-        verbose_name_plural = "Categories"from django.db import models
-# from customers.models import User
-from django.conf import settings
-from django.core.validators import MaxValueValidator, MinValueValidator
-
-
-class Category(models.Model):
-    category_name = models.CharField(max_length=255)
-
-    class Meta:
-        verbose_name = "Category"
         verbose_name_plural = "Categories"
 
     def __str__(self):
