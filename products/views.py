@@ -4,6 +4,7 @@ from rest_framework.viewsets import GenericViewSet, mixins
 from .models import Product, ProductReview, Category
 from .permissions import IsSupplier
 from .serializers import ProductSerializer, CategorySerializer, ProductReviewSerializer
+from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly
 
 
 class ProductViewSet(viewsets.ModelViewSet):
@@ -29,9 +30,10 @@ class ProductReviewViewSet(mixins.CreateModelMixin,
                    GenericViewSet):
     queryset = ProductReview.objects.all()
     serializer_class = ProductReviewSerializer
+    permission_classes = [IsAuthenticated]
 
 
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
-    permission_classes = [permissions.IsAdminUser,]
+    permission_classes = [IsAuthenticatedOrReadOnly]
