@@ -34,8 +34,8 @@ These instructions will guide you through setting up the project on your local m
 - PostgreSQL
 - Other dependencies listed in `requirements.txt`
   
-## Installation
-### Setting Up a Virtual Environment 🔌 
+##  🔌 Installation
+### Setting Up a Virtual Environment 
 1. **Clone the repository:**
 
   ```bash
