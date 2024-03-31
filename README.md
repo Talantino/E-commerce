@@ -120,7 +120,7 @@ Creating a virtual environment is recommended to keep dependencies required by d
 The project utilizes Django REST framework and drf-yasg for generating real-time API documentation using Swagger UI. This documentation provides a clear overview of all available API endpoints, their expected parameters, and response formats. Additionally, you can directly interact with the API through the Swagger UI to test endpoints.
 
 To access the Swagger UI:
-1. Ensure the project is running by following the [Installation]() and [Running the server](#running-the-server) instructions.
+1. Ensure the project is running by following the [Installation](#installation) and [Running the server](#running-the-server) instructions.
 2. Navigate to `/api/docs/` in your web browser. Example: `http://127.0.0.1:8000/api/docs/`
 
 Here, you'll find a list of all API endpoints grouped by model. You can expand each endpoint to see detailed information and perform test requests directly from your browser.
