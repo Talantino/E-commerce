@@ -1,17 +1,17 @@
 # 🛒 E-commerce
-This project is a comprehensive e-commerce platform built with Django.
-It is designed to showcase Django's ORM capabilities, focusing on well-structured and optimized data models for products, users, orders, and payments.
-The platform includes RESTful API endpoints with permissions tailored for buyers and suppliers.
+This Django-based e-commerce platform serves as a pet project aimed at refining my web development skills. It emphasizes the use of Django's ORM for efficient data modeling and includes RESTful API endpoints to simulate real-world e-commerce functionalities, such as product management, user roles, and order processing. The project also explores Django REST Framework for API development and drf-yasg for generating interactive API documentation.
 
 
 ## 📋 Features
 
 - **Product Management**: Add, update, and delete products with categories and suppliers.
 - **User Roles**: Two main user roles (buyers aka users and suppliers) with different permissions.
-- **Order Management**: Create and manage orders with dynamic pricing based on discounts and quantity. 15% off for an item if a discount applied and 
+- **Order Management**: Create and manage orders with dynamic pricing based on discounts and quantity. 15% off for an item if discount applied and if it exceeds the total amount of 20000 KGS. 10% off for an order that is more than 10000 KGS.
 - **API Endpoints**: RESTful API for managing products, orders, and reviews with role-based access control.
-- **Reviews and Ratings**: Users can rate products and leave reviews.
+- **Reviews and Ratings**: Feature for users to review products and rate them.
 - **Address Management**: Separate billing and shipping address management for orders.
+- **JWT Authorization**: Secure API access through JSON Web Tokens (JWT) for authentication and authorization, ensuring safe user interactions with the platform.
+
 
 
 ## 🛠️ Technologies and Libraries
@@ -29,10 +29,15 @@ These instructions will guide you through setting up the project on your local m
 ### Prerequisites
 
 - Python 3.x
-- pip
+- Pip
 - Virtualenv (optional but recommended)
+- Django
+- DRF
 - PostgreSQL
-- Other dependencies listed in `requirements.txt`
+- Psycopg2-binary
+- PyJWT
+- Python-decouple
+- Drf-yasg
   
 ##  Installation
 ### 🔌 Setting Up a Virtual Environment 
@@ -113,7 +118,7 @@ Creating a virtual environment is recommended to keep dependencies required by d
 
     The project will be available at `http://127.0.0.1:8000/`.
 
-## API Documentation and Testing
+## 🌐 API Documentation and Testing
 
 ### 📗 Swagger UI
 
@@ -125,7 +130,7 @@ To access the Swagger UI:
 
 Here, you'll find a list of all API endpoints grouped by model. You can expand each endpoint to see detailed information and perform test requests directly from your browser.
 
-### Testing API Endpoints
+### 🧪 Testing API Endpoints
 
 #### Using Swagger UI
 1. Go to the Swagger UI page as described above.
@@ -142,7 +147,7 @@ You can also test the API endpoints using `curl` from the command line. Here's a
 curl -X GET "http://127.0.0.1:8000/api/products/" -H "accept: application/json"
 ```
 
-### Using Postman
+### 👨🏼‍🚀 Using Postman
 Postman is a popular tool for testing APIs. You can import the Swagger-generated documentation into Postman and use it to send requests to your API.
 
 Open Postman and click the "Import" button.
@@ -159,11 +164,16 @@ python manage.py runserver
 The server will start, and you can access the application and API at http://127.0.0.1:8000/
 
 ## 🤝 Contributing
-Contributions to improve the project are welcome. Please feel free to fork the repository and submit pull requests.
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated ⸜(｡˃ ᵕ ˂ )⸝♡.
 
 ## ✍️ Authors
 Talantino - Initial work - [git@github.com:Talantino]
 
 ## ⚖️ License
 This project is licensed under the MIT License - see the [LICENSE.md](#license.md) file for details.
+
+## 🙏 Acknowledgments
+ʕ•ᴥ•ʔっ♡ Hat tip to all Django and DRF documentation contributors.
+Inspired by various open source projects.
+
 
