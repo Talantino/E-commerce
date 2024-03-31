@@ -34,8 +34,8 @@ These instructions will guide you through setting up the project on your local m
 - PostgreSQL
 - Other dependencies listed in `requirements.txt`
   
-##  🔌 Installation
-### Setting Up a Virtual Environment 
+##  Installation
+### 🔌 Setting Up a Virtual Environment 
 1. **Clone the repository:**
 
   ```bash
@@ -162,8 +162,8 @@ The server will start, and you can access the application and API at http://127.
 Contributions to improve the project are welcome. Please feel free to fork the repository and submit pull requests.
 
 ## ✍️ Authors
-Talantino - Initial work - git@github.com:Talantino
+Talantino - Initial work - [git@github.com:Talantino]
 
 ## ⚖️ License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](#license.md) file for details.
 
